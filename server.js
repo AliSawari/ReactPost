@@ -1,8 +1,12 @@
 const express = require('express'),
-port = process.env.PORT || 3000,
-D = __dirname,
-app = express(),
-{urlencoded} = require('body-parser');
+      http = require('http'),
+      port = process.env.PORT || 3000,
+      D = __dirname,
+      app = express(),
+      {urlencoded} = require('body-parser');
+
+// ok
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', true);
@@ -13,7 +17,9 @@ app.use((req, res, next) => {
 app.use(urlencoded({extended:true}));
 app.use(express.static(`${D}/public`));
 
-app.listen(port, (err) => {
+const server = http.createServer(app);
+
+server.listen(port, (err) => {
   if(err) return console.log(err);
   console.log(`Server is up on port ${port}`);
 });
