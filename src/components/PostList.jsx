@@ -41,7 +41,9 @@ class PostList extends Component {
 
         <Search/>
 
-        {this.renderPosts()}
+        <div className="row">
+          {this.renderPosts()}
+         </div>
 
       </div>
   }
