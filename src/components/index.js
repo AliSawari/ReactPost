@@ -1,7 +1,7 @@
 import Container from './Container';
-import Show from './Show';
+import PostList from './PostList';
 
 export {
   Container,
-  Show
+  PostList
 }

@@ -1,19 +1,26 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
-import store from './store';
+import Store from './store';
 
-import {Container, Show} from './components';
+import {Container, PostList} from './components';
 
-const Main = () => (
-	<Provider store={store}>
-		<Container>
-			<Show />
-		</Container>
-	</Provider>
-);
+class Main extends Component {
+	constructor(props){
+		super(props);
+	}
 
-render(<Main />, document.getElementById('root'));
+	render(){
+		return <div>
+			<Provider store={Store}>
+				<Container>
+					<PostList />
+				</Container>
+				</Provider>
+		</div>
+	}
+}
 
 
-// adding few lines here
+
+render(<Main />,document.getElementById('root'));

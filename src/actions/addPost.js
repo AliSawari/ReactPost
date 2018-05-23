@@ -6,3 +6,6 @@ export default function addPost(title){
     post: {title}
   });
 }
+
+addPost("Hello!");
+addPost("The Second post!");

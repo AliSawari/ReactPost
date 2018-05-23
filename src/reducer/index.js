@@ -1,12 +1,5 @@
 let initState = {
-  posts: [
-    {
-      title: "Hello!"
-    },
-    {
-      title: "The Second post!"
-    }
-  ],
+  posts: [],
   searchText: ''
 }
 
@@ -17,7 +10,7 @@ export default function Reducer(state = initState, action){
         ...state,
         posts: [
           ...state.posts,
-          action.post
+          action.post,
         ]
       }
     case 'SEARCH':
