@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import AddPost from './AddPost';
 import Post from './Post';
+import Search from './Search';
 
 class PostList extends Component {
   constructor(props){
@@ -10,12 +11,20 @@ class PostList extends Component {
   }
 
   renderPosts(){
-    let {posts} = this.props;
-    console.log(posts);
+    let {posts, searchText} = this.props;
     if(posts){
-      return posts.map((p, k) => {
-        return <Post key={k} id={k} title={p.title}/>
-      });
+      if(searchText.length > 2){
+        let filter = posts.filter((p) => {
+          return p.title.toLowerCase().includes(searchText.toLowerCase())
+        });
+        return filter.map((p, k) => {
+          return <Post key={k} id={k} title={p.title}/>
+        });
+      } else {
+        return posts.map((p, k) => {
+          return <Post key={k} id={k} title={p.title}/>
+        });
+      }
     } else {
       console.log("empty");
     }
@@ -30,12 +39,12 @@ class PostList extends Component {
 
         <AddPost/>
 
+        <Search/>
+
         {this.renderPosts()}
 
       </div>
   }
 }
 
-export default connect(state => {
-  return state;
-})(PostList);
+export default connect(s => s)(PostList);
