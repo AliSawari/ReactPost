@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-
 import {addPost} from './../actions';
+// something here
 
 export default class AddPost extends Component {
   constructor(props){
