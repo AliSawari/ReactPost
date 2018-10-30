@@ -1,2 +1,4 @@
 node_modules/
 public/js/bundle.js
+npm-error.log
+yarn-error.log
