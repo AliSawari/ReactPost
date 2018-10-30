@@ -14,12 +14,13 @@ class PostList extends Component {
     let {posts, searchText} = this.props;
     if(posts){
       if(searchText.length > 2){
-        let filter = posts.filter((p) => {
+
+        return posts.filter(p => {
           return p.title.toLowerCase().includes(searchText.toLowerCase())
-        });
-        return filter.map((p, k) => {
+        }).map((p, k) => {
           return <Post key={k} id={k} title={p.title}/>
         });
+
       } else {
         return posts.map((p, k) => {
           return <Post key={k} id={k} title={p.title}/>
@@ -49,10 +50,5 @@ class PostList extends Component {
   }
 }
 
-// function whatNot(posts){
-//   if(posts.length > 4) {
-//     alert("Enjoying the App? Help us improve by contributing to the project :)");
-//   }
-// }
 
 export default connect(s => s)(PostList);

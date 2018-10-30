@@ -19,7 +19,7 @@ app.use(express.static(`${D}/public`));
 
 const server = http.createServer(app);
 
-server.listen(port, (err) => {
+server.listen(port, err => {
   if(err) return console.log(err);
   console.log(`Server is up on port ${port}`);
 });

@@ -1,6 +1,6 @@
 {
   "name": "ReactPost",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "a simple react todo app",
   "main": "server.js",
   "author": "Ali Sawari @AliSawari",
@@ -12,17 +12,17 @@
   },
   "dependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
-    "webpack": "^4.16.3",
-    "webpack-cli": "^3.1.0"
+    "express": "^4.16.4",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
   }
 }

@@ -5,21 +5,6 @@ import Store from './store';
 
 import {Container, PostList} from './components';
 
-// class Main extends Component {
-// 	constructor(props){
-// 		super(props);
-// 	}
-
-// 	render(){
-// 		return <div>
-// 			<Provider store={Store}>
-// 				<Container>
-// 					<PostList />
-// 				</Container>
-// 				</Provider>
-// 		</div>
-// 	}
-// }
 
 const Main = () => (
 		<div>
