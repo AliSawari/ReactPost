@@ -1,8 +1,7 @@
 FROM node
-FROM yarn
 WORKDIR /app
 COPY package.json /app
-RUN yarn
+RUN npm i
 COPY . /app
-CMD node .
+CMD npm start
 EXPOSE 3000
